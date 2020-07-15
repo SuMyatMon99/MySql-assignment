@@ -132,13 +132,13 @@ mysql> select pId, pName, salary from player where salary in (select MAX(salary)
 +-----+--------------+------------+
 1 row in set (0.00 sec)
 
-mysql> select * from player where age>30 and salary> 700000.00;
+mysql> select * from player where age>30 and salary> 700000.00 order by pName desc;
 +-----+-----------------+---------+------+-----------+------+--------+
 | pId | pName           | jersyno | age  | salary    | tId  | height |
 +-----+-----------------+---------+------+-----------+------+--------+
-| p16 | Antoine         |      28 |   35 | 800000.00 | t4   |    6.5 |
-| p19 | Neto            |      16 |   35 | 800000.00 | t4   |    6.7 |
 | p5  | Victor Lindelof |       2 |   35 | 800000.00 | t1   |    6.7 |
+| p19 | Neto            |      16 |   35 | 800000.00 | t4   |    6.7 |
 | p8  | Bernd           |      10 |   35 | 800000.00 | t2   |    6.6 |
+| p16 | Antoine         |      28 |   35 | 800000.00 | t4   |    6.5 |
 +-----+-----------------+---------+------+-----------+------+--------+
-4 rows in set (0.00 sec)
+4 rows in set (0.05 sec)
